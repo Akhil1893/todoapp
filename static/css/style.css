@@ -1,0 +1,268 @@
+/* Custom styles for UPI Expense Tracker */
+
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.content-section {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.card-header {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    border-radius: 10px 10px 0 0 !important;
+    font-weight: 600;
+}
+
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+    padding: 8px 20px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #0056b3, #004085);
+    transform: translateY(-1px);
+}
+
+.form-control, .form-select {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.table {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table thead th {
+    border-top: none;
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #495057;
+}
+
+.transaction-row {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.transaction-row:hover {
+    background-color: #f8f9fa;
+}
+
+.amount-debit {
+    color: #dc3545;
+    font-weight: 600;
+}
+
+.amount-credit {
+    color: #28a745;
+    font-weight: 600;
+}
+
+.category-badge {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    border-radius: 12px;
+}
+
+.merchant-card {
+    background: linear-gradient(135deg, #6c757d, #495057);
+    color: white;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.merchant-name {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.merchant-amount {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.alert {
+    border-radius: 8px;
+    border: none;
+}
+
+.nav-link {
+    border-radius: 8px;
+    margin: 0 2px;
+    transition: all 0.2s;
+}
+
+.nav-link:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.nav-link.active {
+    background-color: rgba(255,255,255,0.2);
+}
+
+/* Chart containers */
+canvas {
+    max-height: 300px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 20px;
+    }
+    
+    .table-responsive {
+        font-size: 0.9rem;
+    }
+    
+    .btn {
+        padding: 6px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Loading spinner */
+.spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Status indicators */
+.status-success {
+    color: #28a745;
+}
+
+.status-error {
+    color: #dc3545;
+}
+
+.status-warning {
+    color: #ffc107;
+}
+
+/* Animation for cards */
+.card-animate {
+    animation: slideInUp 0.5s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Accordion customization */
+.accordion-button {
+    border-radius: 8px;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+/* Code blocks */
+code {
+    background-color: #f8f9fa;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    display: block;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+/* Modal customization */
+.modal-content {
+    border-radius: 10px;
+    border: none;
+}
+
+.modal-header {
+    border-bottom: 1px solid #eee;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Pagination */
+.pagination .page-link {
+    border-radius: 6px;
+    margin: 0 2px;
+    border: 1px solid #dee2e6;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Summary cards hover effect */
+.card.bg-danger:hover,
+.card.bg-success:hover,
+.card.bg-info:hover,
+.card.bg-warning:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
